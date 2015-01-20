@@ -16,3 +16,16 @@ class Choice(models.Model):
 		return self.choice_text
 
 # Create your models here.
+
+class User(BaseModel):
+	userkey = db.StringListProperty(default=[])
+	displayname = db.StringProperty(default=[])
+	type = db.StrinogProperty(choices=("admin", "member"),default ="member")
+
+	#contact information
+	email = db.StringProperty(default="")
+	phone = db.StringProperty(default="")
+	phone_mobile = db.StringProperty(default="")
+	
+
+
